@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f4f2">
+<title>Xolors — Find the name of any color</title>
+<meta name="description" content="Explore color names and convert colors between HEX, RGB, HSV, HSL, CMYK and OKLCH.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand-dot"></span><span>Xolors</span></a>
+  <div class="top-actions">
+    <button id="randomBtn" class="button ghost">Random color</button>
+    <a class="github" href="https://github.com/intensed-dev/xolors" target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <p class="eyebrow">COLOR NAME EXPLORER</p>
+  <h1>Give a color a name.</h1>
+  <p class="lede">Pick a color, paste a HEX value, or search thousands of named colors.</p>
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input id="search" autocomplete="off" placeholder="Search a color name or enter #HEX…" aria-label="Search colors">
+    <button id="clearSearch" class="clear" hidden>×</button>
+  </div>
+  <div id="searchResults" class="search-results" hidden></div>
+</section>
+
+<section class="workspace">
+  <div class="picker-card">
+    <div id="svPicker" class="sv-picker" role="slider" aria-label="Saturation and brightness">
+      <div id="pickerCursor" class="picker-cursor"></div>
+    </div>
+    <div id="huePicker" class="hue-picker" role="slider" aria-label="Hue"></div>
+    <div class="color-input-row">
+      <input id="nativeColor" type="color" value="#7C5CFC" aria-label="Choose color">
+      <input id="hexInput" spellcheck="false" value="#7C5CFC" aria-label="HEX color">
+      <button id="copyHex" class="button">Copy HEX</button>
+    </div>
+  </div>
+
+  <div class="result-card">
+    <div id="swatch" class="swatch"></div>
+    <div class="result-content">
+      <p class="eyebrow">CLOSEST NAME</p>
+      <h2 id="colorName">—</h2>
+      <p id="distance" class="muted">Choose a color to begin.</p>
+      <div id="values" class="values"></div>
+    </div>
+  </div>
+</section>
+
+<section class="formats">
+  <div class="section-head">
+    <div><p class="eyebrow">COLOR DATA</p><h2>Every value, one place.</h2></div>
+    <button id="copyAll" class="button ghost">Copy all</button>
+  </div>
+  <div id="formatGrid" class="format-grid"></div>
+</section>
+
+<section class="named-section">
+  <div class="section-head">
+    <div><p class="eyebrow">DISCOVER</p><h2>Named colors</h2></div>
+    <span id="count" class="muted"></span>
+  </div>
+  <div id="colorGrid" class="color-grid"></div>
+</section>
+</main>
+<footer><span>Xolors</span><span>Color data from the <a href="https://github.com/meodai/color-names" target="_blank" rel="noreferrer">color-name-list</a>.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
