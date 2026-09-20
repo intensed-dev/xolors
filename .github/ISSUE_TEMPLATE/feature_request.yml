@@ -1,0 +1,46 @@
+name: Feature / improvement
+description: Propose a concrete improvement to Xolors
+title: "XOL-#### — "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: ["Color formats", "Color picker", "Search / discovery", "Named colors", Accessibility, "Developer tooling", Performance, "Mobile / responsive", "Data quality", Documentation, Other]
+    validations: {required: true}
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations: {required: true}
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+    validations: {required: true}
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: Show an input and the desired output or UI.
+    validations: {required: true}
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: "- [ ] "
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Compatibility
+      options: ["No breaking change", "Changes public UI", "Changes color-data behavior", "Requires new dependency", Unsure]
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: This proposal is specific enough to implement.
+          required: true
